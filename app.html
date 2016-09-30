@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Angular JS</title>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/app.config.js"></script>
+    <script src="js/app.config.routes.js"></script>
+    <script src="js/controladores/homeCtrl.js"></script>
+    <script src="js/services/Usuarios.js"></script>
+  </head>
+  <body>
+    <ul>
+      <li><a ui-sref="user">Usuario</a></li>
+      <li><a ui-sref="admin">Administrador</a></li>
+      <li><a ui-sref="invitado">Invitado</a></li>
+      <li><a ui-sref="desconocido">Ruta Incorrecta</a></li>
+      <li><a ui-sref="pagos">Pagos</a></li>
+    </ul>
+
+    <div ui-view ></div>
+    <div ng-controller="appCtrl" class="">
+      <p>
+        Mi nombre es {{nombre}}
+      </p>
+      <p>
+        Mi apellido es {{apellido}}
+      </p>
+    </div>
+    <div ng-controller="appCtrl1" class="">
+      <button type="button" ng-click="cambiar(name)">Cambiar Nombre</button>
+      <p>
+        <input type="text" ng-model="name">
+      </p>
+    </div>
+    <div ng-controller="padreCtrl" class="">
+      <p>
+        Numero de eventos emitido por los hijos {{count}}
+      </p>
+      <button type="button" ng-click="eventoPadre()"> Padre </button>
+      <div ng-controller="hijo1Ctrl" class="">
+        <p>
+          Numero de eventos emitido el padre {{count}}
+        </p>
+        <button type="button" ng-click="eventoHijo1()"> Hijo 1 </button>
+      </div>
+
+      <div ng-controller="hijo2Ctrl" class="">
+        <p>
+          Numero de eventos emitido por el padre {{count}}
+        </p>
+        <button type="button" ng-click="eventoHijo2()"> Hijo 2 </button>
+      </div>
+    </div>
+  </body>
+</html>
