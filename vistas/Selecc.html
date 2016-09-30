@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="Selecc">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<meta charset="UTF-8">
+	<title>Seleccionador</title>
+	<script src="controller.js"></script>
+</head>
+
+<body ng-controller ="FirstController">
+	<label>Numero de selectores que desea:</label> <input type="text" ng-model="contSel" ng-change="actualizar(contSel)"></input> <br>
+		<div> 
+			<select ng-repeat = "selector in selectores" ng-model="dato" ng-click="borrarCasilla(dato)"> <br>
+				<option ng-repeat="dato in datos"> {{dato.descripcion}} <span hidden> {{dato}}</span> </option>
+			</select>
+		</div>
+</body>
+</html>
