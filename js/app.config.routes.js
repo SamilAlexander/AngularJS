@@ -4,11 +4,11 @@ app.config(["$stateProvider","$urlRouterProvider","CONFIG","ROLES", function ($s
   $stateProvider
     .state('admin',{
       url: "/admin",
-      template: "<p>Hola Administrador</p>",//"vistas/admin.html",
+      templateUrl: "vistas/admin.html",
       data: {
         autorizado: [ROLES.ADMIN.ROL]
       }
-    }) 
+    })
     .state('user',{
       url: "/user",
       template: "<p>Hola Usuario</p>",//"vistas/user.html",
