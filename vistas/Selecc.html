@@ -10,8 +10,8 @@
 <body ng-controller ="FirstController">
 	<label>Numero de selectores que desea:</label> <input type="text" ng-model="contSel" ng-change="actualizar(contSel)"></input> <br>
 		<div> 
-			<select ng-repeat = "selector in selectores" ng-model="dato" ng-click="borrarCasilla(dato)"> <br>
-				<option ng-repeat="dato in datos"> {{dato.descripcion}} <span hidden> {{dato}}</span> </option>
+			<select ng-repeat = "selector in selectores"> <br>
+				<option ng-repeat="dato in datos"> {{dato.descripcion}}</option>
 			</select>
 		</div>
 </body>

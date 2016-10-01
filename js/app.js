@@ -16,6 +16,7 @@ app.run(["$rootScope","$location","$state","$log","CONFIG","ROLES",function ($ro
     console.log("ESTO ES UNA PRUEBA");
     var numero = 7;
     console.log("El numero es: ",numero);
+    console.log("Hola Samil");
 
     if (toState.data !== undefined) {
       //console.log(toState.data.autorizado.indexOf(CONFIG.ROL_ACTUAL));
